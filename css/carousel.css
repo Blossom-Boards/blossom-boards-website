@@ -1,0 +1,45 @@
+
+#slideshow {
+  display: flex;
+}
+
+.slideshow-button {
+  border: none;
+  font-size: 50px;
+}
+
+.slideshow-images {
+  margin-top: 30px;
+  display: flex;
+  width: 60vw;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow-image {
+  border-radius: 20px;
+  border: #E5A4A4 5px solid;
+  margin: 10px;
+  flex-grow: 1;
+  height: 80%;
+  background-color: orange;
+}
+
+.slideshow-images :nth-child(1) {
+  position: relative;
+  left: 50px;
+  z-index: 1;
+}
+
+.slideshow-images :nth-child(2) {
+  flex-grow: 1.5;
+  height: 100%;
+  z-index: 2;
+}
+
+.slideshow-images :nth-child(3) {
+  position: relative;
+  right: 50px;
+  z-index: 1;
+}

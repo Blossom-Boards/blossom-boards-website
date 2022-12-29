@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@font-face {
+    font-family:"Robot";
+    src: url("Robot_Font.otf");
+}
+
+#name{
+    margin-top:60px;
+    font-family:"Robot";
+    font-size: 60px;
+    letter-spacing: 2px;
+    padding-bottom:0;
+    margin-bottom:0px;
+    margin-left:50px;
+}
+body{
+    background-color:#FFF8F8;
+    color:#E5A4A4;
+    padding:0;
+    margin:0;
+}
+nav{
+    font-family:"Inter";
+    padding:0;
+    margin-top:0;
+    display:flex;
+    justify-content: flex-start;
+    gap:80px;
+    margin-left:30px;
+}
+h1{
+    font-size:30px;
+}
+hr{
+    height:10px;
+    background-color:#E5A4A4;
+    border-radius:0%;
+    border-style:none;
+    margin-left:0;
+    width:90%;
+
+}
+main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+
+}
