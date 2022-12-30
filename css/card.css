@@ -1,0 +1,25 @@
+.card-image { 
+    overflow:hidden;
+    border-radius: 20px;
+    border: #E5A4A4 5px solid;
+}
+
+.card-image-products {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.card-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container h1{
+  margin: 6px;
+}
+
+.card-container p{
+  margin: 5px 0 0 15px;
+}

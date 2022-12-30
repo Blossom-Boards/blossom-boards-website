@@ -1,6 +1,6 @@
 let slideShowSection = document.querySelector(".slideshow-images")
 
-let images = ['../images/board1.jpg','../images/board2.jpg','../images/board3.jpg','../images/icon.png','../images/board1.jpg',]
+let images = ['../images/board1.jpg','../images/board2.jpg','../images/board3.jpg','../images/board1.jpg',]
 let images_linked = new LinkedList(images)
 let currentImage = images_linked.head 
 
@@ -50,13 +50,7 @@ function createImage(image,index) {
   slideShowSection.appendChild(imageContainer)
 }
 
-function onHover() {
-  
-}
-
 function animateLeft() {
-
-  
 
   let timeline = gsap.timeline()
   .to('.index-0', {
