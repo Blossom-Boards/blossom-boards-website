@@ -1,21 +1,34 @@
 let slideShowSection = document.querySelector(".slideshow-images")
 
-let images = ['../images/board1.jpg','../images/board2.jpg','../images/board1.jpg']
-let currentIndex = 0
+let images = ['../images/board1.jpg','../images/board2.jpg','../images/board3.jpg','../images/icon.png','../images/board1.jpg',]
+let images_linked = new LinkedList(images)
+let currentImage = images_linked.head 
 
 function fillCarousel() {
-  images.forEach((image, index) => {
 
-    if(index >= 3) return
+  let tempNode = currentImage
 
-    createImage(image, index)
-  })
+  for(let i = 0; i < 3; i++) {
+    console.log(tempNode.value)
+    createImage(tempNode.value,i)
+    tempNode = tempNode.next
+  }
 
-let leftButton = document.querySelector('.index-0')
-let rightButton = document.querySelector('.index-2')
+  let leftButton = document.querySelector('.index-0')
+  let rightButton = document.querySelector('.index-2')
 
-leftButton.addEventListener('click', moveLeft)
-rightButton.addEventListener('click', moveRight)
+  leftButton.addEventListener('click', moveLeft)
+  rightButton.addEventListener('click', moveRight)
+}
+
+function moveLeft() {
+  currentImage = currentImage.prev
+  animateLeft()
+}
+
+function moveRight() {
+  currentImage = currentImage.next
+  animateRight()
 }
 
 // creates the image
@@ -26,18 +39,14 @@ function createImage(image,index) {
   let imageElement = document.createElement('img')
   //imageElement.className = 'slideshow-image'
   imageElement.src = image
+  imageElement.alt = image
   imageContainer.appendChild(imageElement)
 
   slideShowSection.appendChild(imageContainer)
 }
 
 function onHover() {
-
-}
-
-function moveLeft() {
-  currentIndex = currentIndex == 0 ? currentIndex = images.length - 1 : currentIndex - 1
-  animateLeft()
+  
 }
 
 function animateLeft() {
@@ -77,14 +86,8 @@ function animateLeft() {
   //now that everything is in place, delete all of the elements and add them back
 }
 
-function moveRight() {
-
-  currentIndex = currentIndex == images.length - 1 ? 0 : currentIndex + 1
-  animateRight()
-}
-
 function animateRight() {
-  let slideShowElements = document.querySelectorAll('.slideshow-images *')
+  // let slideShowElements = document.querySelectorAll('.slideshow-images *')
 
   let timeline = gsap.timeline()
   timeline.to('.index-0', {
@@ -127,7 +130,7 @@ function reset() {
   slideShowElements.forEach(element => element.remove())
 
   fillCarousel()
+
 }
+
 fillCarousel()
-
-
