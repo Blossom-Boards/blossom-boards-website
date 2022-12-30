@@ -29,7 +29,8 @@ main {
 }
 
 #products{
-    justify-content: center;
+    margin-left:10%;
+    justify-content: left;
     display:flex;
     gap:20px;
 }
