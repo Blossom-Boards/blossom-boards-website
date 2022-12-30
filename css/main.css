@@ -4,6 +4,14 @@
     font-family:"Robot";
     src: url("../fonts/Robot_Font.otf");
     font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"Robot";
+    src: url("../fonts/Robot_Font.otf");
+    font-weight:bold;
+    font-style:normal;
 }
 
 #name {
@@ -43,19 +51,21 @@ nav {
     margin-left:30px;
 }
 
-a {
+.hover-text{
     text-decoration: none;
     color:#E5A4A4;
+    font-size:30px;
 }
 
-a:hover {
+.hover-text h1:hover {
     text-decoration: none;
-    font-weight:bolder;
+    font-weight: 800;
 }
 
 h1 {
     font-size:30px;
 }
+
 hr {
     height:6px;
     background-color:#E5A4A4;
@@ -74,17 +84,20 @@ main {
 
 #mission-statement {
     padding:0;
-    text-align: center;
+    margin:150px;
+    text-align: left;
     justify-content: center;
     display:block;
     font-family:"Inter";
-    font-size:20px;
+    font-size:30px;
 }
 
 #mission{
+    margin-left:100px;
+    margin-right:100px;
     margin-top:150px;
     font-family:"Robot";
-    font-size:40px;
+    font-size:50px;
     text-align:center;
     letter-spacing: 2px;
 }
