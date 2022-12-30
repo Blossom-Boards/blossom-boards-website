@@ -9,7 +9,6 @@ function fillCarousel() {
   let tempNode = currentImage
 
   for(let i = 0; i < 3; i++) {
-    console.log(tempNode.value)
     createImage(tempNode.value,i)
     tempNode = tempNode.next
   }
@@ -18,7 +17,10 @@ function fillCarousel() {
   let rightButton = document.querySelector('.index-2')
 
   leftButton.addEventListener('click', moveLeft)
+  document.querySelector('.index-0').style.opacity = "0.3"
   rightButton.addEventListener('click', moveRight)
+  document.querySelector('.index-2').style.opacity = "0.3"
+  
 }
 
 function moveLeft() {
@@ -50,12 +52,12 @@ function onHover() {
 }
 
 function animateLeft() {
-  let slideShowElements = document.querySelectorAll('.slideshow-images *')
 
   let timeline = gsap.timeline()
   .to('.index-0', {
     transform: 'translateX(33.4vw)',
     duration: .25,
+    opacity:1,
     height:'40vh',
   })
 
@@ -64,6 +66,7 @@ function animateLeft() {
     transform: 'translateX(33.4vw)',
     zIndex: 1,
     height:'30vh',
+    opacity: 0.3,
     duration: .25,
   })
   
@@ -75,6 +78,9 @@ function animateLeft() {
   .to('.index-2', {
     transform: 'translateX(-100vw)',
     duration: 0,
+    onComplete: () => {
+      document.querySelector('.index-2 img').src = currentImage.value
+    }
   })
   .to('.index-2', {
     transform: 'translateX(-66.5vw)',
@@ -87,16 +93,19 @@ function animateLeft() {
 }
 
 function animateRight() {
-  // let slideShowElements = document.querySelectorAll('.slideshow-images *')
 
   let timeline = gsap.timeline()
-  timeline.to('.index-0', {
+  timeline
+  .to('.index-0', {
     transform: 'translateX(-40vw)',
     duration: .25,
   })
   .to('.index-0', {
     transform: 'translateX(100vw)',
     duration: 0,
+    onComplete: () => {
+      document.querySelector('.index-0 img').src = currentImage.next.next.value
+    }
   })
   .to('.index-0', {
     transform: 'translateX(67vw)',
@@ -110,6 +119,7 @@ function animateRight() {
     transform: 'translateX(-33.4vw)',
     zIndex: 1,
     height: '30vh',
+    opacity:.3,
     duration: .25,
   })
 
@@ -118,11 +128,12 @@ function animateRight() {
     transform: 'translateX(-33.4vw)',
     zIndex: 2,
     height: '40vh',
+    opacity:1,
     duration: .25,
   })
-
-  //now that everything is in place, delete all of the elements and add them back
 } 
+
+//now that everything is in place, delete all of the elements and add them back
 
 function reset() {
   let slideShowElements = document.querySelectorAll('.slideshow-images *')
