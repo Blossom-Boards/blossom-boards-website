@@ -20,14 +20,12 @@ main {
 
 .questions{
     margin-left:80px;
-    font-family:"Inter";
     font-size:35px;
     color:#A88181;
 }
 
 .answers{
     margin-left:80px;
-    font-family:"Inter";
     font-size:25px;
     color:#D2B0B0;
 }

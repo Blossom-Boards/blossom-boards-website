@@ -5,9 +5,16 @@
 }
 
 .card-image-products {
+    transition: 500ms;
+    opacity:70%;
     object-fit: cover;
-    width: 100%;
+    width: 90%;
     height: 250px;
+}
+
+.card-image-products:hover {
+    transition: 500ms;
+    opacity:100%;
 }
 
 .card-container {
@@ -18,8 +25,10 @@
 
 .card-container h1{
   margin: 6px;
+  font-size:20px;
 }
 
 .card-container p{
-  margin: 5px 0 0 15px;
+  margin: 5px 0 0 6px;
+  font-size:16px;
 }
