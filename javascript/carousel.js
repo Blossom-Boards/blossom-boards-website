@@ -1,8 +1,10 @@
 let slideShowSection = document.querySelector(".slideshow-images")
 
-let images = ['../images/board1.jpg','../images/board2.jpg','../images/board3.jpg','../images/icon.png','../images/board1.jpg',]
+let images = ['../images/board1.jpg','../images/board2.jpg','../images/board3.jpg','../images/board1.jpg',]
 let images_linked = new LinkedList(images)
 let currentImage = images_linked.head 
+
+let autoScrollInterval = null
 
 function fillCarousel() {
 
@@ -24,11 +26,13 @@ function fillCarousel() {
 }
 
 function moveLeft() {
+  resetAutoScrolling()
   currentImage = currentImage.prev
   animateLeft()
 }
 
 function moveRight() {
+  resetAutoScrolling()
   currentImage = currentImage.next
   animateRight()
 }
@@ -39,7 +43,6 @@ function createImage(image,index) {
   imageContainer.className = `slideshow-image index-${index}`
 
   let imageElement = document.createElement('img')
-  //imageElement.className = 'slideshow-image'
   imageElement.src = image
   imageElement.alt = image
   imageContainer.appendChild(imageElement)
@@ -47,25 +50,23 @@ function createImage(image,index) {
   slideShowSection.appendChild(imageContainer)
 }
 
-function onHover() {
-  
-}
-
 function animateLeft() {
 
   let timeline = gsap.timeline()
   .to('.index-0', {
-    transform: 'translateX(33.4vw)',
+    transform: 'translateX(25.45vw)',
     duration: .25,
     opacity:1,
     height:'40vh',
+    width: '80vw',
   })
 
   let timeline2 = gsap.timeline()
   timeline2.to('.index-1', {
-    transform: 'translateX(33.4vw)',
+    transform: 'translateX(25.45vw)',
     zIndex: 1,
     height:'30vh',
+    width: '40vw',
     opacity: 0.3,
     duration: .25,
   })
@@ -83,7 +84,7 @@ function animateLeft() {
     }
   })
   .to('.index-2', {
-    transform: 'translateX(-66.5vw)',
+    transform: 'translateX(-75.45vw)',
     duration: .25,
     onComplete: reset
   })
@@ -97,7 +98,7 @@ function animateRight() {
   let timeline = gsap.timeline()
   timeline
   .to('.index-0', {
-    transform: 'translateX(-40vw)',
+    transform: 'translateX(-25.45vw)',
     duration: .25,
   })
   .to('.index-0', {
@@ -108,7 +109,7 @@ function animateRight() {
     }
   })
   .to('.index-0', {
-    transform: 'translateX(67vw)',
+    transform: 'translateX(75.45vw)',
     duration: .25,
     onComplete: reset
   })
@@ -116,18 +117,20 @@ function animateRight() {
   let timeline2 = gsap.timeline()
   timeline2.to('.index-1', {
     delay: 0,
-    transform: 'translateX(-33.4vw)',
+    transform: 'translateX(-25.45vw)',
     zIndex: 1,
     height: '30vh',
     opacity:.3,
+    width: '40vw',
     duration: .25,
   })
 
   let timeline3 = gsap.timeline()
   timeline3.to('.index-2', {
-    transform: 'translateX(-33.4vw)',
+    transform: 'translateX(-25.45vw)',
     zIndex: 2,
     height: '40vh',
+    width: '80vw',
     opacity:1,
     duration: .25,
   })
@@ -144,4 +147,23 @@ function reset() {
 
 }
 
+function startAutoScrolling() {
+  autoScrollInterval = setInterval(()=> {
+
+    moveRight()
+  
+  }, 5000)
+}
+
+function stopAutoScrolling() {
+  clearInterval(autoScrollInterval)
+}
+
+function resetAutoScrolling() {
+  console.log('jeffing')
+  stopAutoScrolling(autoScrollInterval)
+  startAutoScrolling()
+}
+
 fillCarousel()
+startAutoScrolling()

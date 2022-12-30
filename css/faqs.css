@@ -1,65 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
-
-@font-face {
-    font-family:"Robot";
-    src: url("../fonts/Robot_Font.otf");
-}
-
-#name {
-    display:inline-block;
-    margin-top:60px;
-    font-family:"Robot";
-    font-size: 60px;
-    letter-spacing: 2px;
-    padding:0;
-    margin-bottom:0px;
-    margin-left:50px;
-}
-
-body {
-    background-color:#FFF8F8;
-    color:#E5A4A4;
-    padding:0;
-    margin:0;
-}
-
-#icon{
-    width:100px;
-    height:100px;
-    position:absolute;
-    padding-top:16px;
-}
-
-nav {
-    font-family:"Inter";
-    padding:0;
-    margin-top:0;
-    display:flex;
-    justify-content: flex-start;
-    gap:80px;
-    margin-left:30px;
-}
 
 a {
     text-decoration: none;
     color:#E5A4A4;
 }
 
-h1 {
-    font-size:30px;
-}
-hr {
-    height:10px;
-    background-color:#E5A4A4;
-    border-radius:0%;
-    border-style:none;
-    margin-left:0;
-    width:90%;
-
-}
-
 main {
     width: 100vw;
     align-items: center;
     justify-content: center;
+}
+
+#faq_header{
+    margin-top:80px;
+    margin-left:80px;
+    font-family:"Robot";
+    font-size:50px;
+    letter-spacing: 2px;
+}
+
+.questions{
+    margin-left:80px;
+    font-size:35px;
+    color:#A88181;
+}
+
+.answers{
+    margin-left:80px;
+    font-size:25px;
+    color:#D2B0B0;
 }
