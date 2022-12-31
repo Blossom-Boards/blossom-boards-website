@@ -1,8 +1,20 @@
+main {
+    padding: 40px;
+}
+
 .ordering-method-buttons {
     display: flex;
     flex-direction: column;
 }
 
 .ordering-button {
-    
+    margin: 10px;
+}
+
+.important-text {
+    width: 80vw;
+}
+
+.red {
+    color: red;
 }
