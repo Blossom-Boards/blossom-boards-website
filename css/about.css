@@ -7,6 +7,30 @@ h1{
     text-align: center;
 }
 
-.profile section{
-    display:flex;
+#profile section{
+    margin: 10px;
+    padding: 50px;
+    display: flex;
+    gap:2rem;
+}
+
+.profile{
+    display:inline-block;
+    
+}
+
+.profile img{
+    overflow:hidden;
+    object-fit: cover;
+    width:250px;
+    height:250px;
+    border:black solid 5px;
+    border-radius:70%;
+}
+
+.profile figcaption{
+    text-align: center;
+    margin-top:10px;
+    width:250px;
+    font-size:16px;
 }

@@ -1,20 +1,46 @@
 let cardsContainer = document.querySelector('.list-of-cards')
 
-let buttons = document.querySelectorAll('button')
+let buttons = document.querySelectorAll('.size-button')
 let selectedSize = buttons[0].innerHTML
 
-buttons.forEach(button => {
+function preventReload() {
+  window.onbeforeunload = () => {
+    alert('your form data may not be saved!')
+    return 'your form data may not be saved!'
+  }
+}
 
-  button.addEventListener('click', (event) => {
-    event.preventDefault()
+function setNextButtonFunctionality() {
+  let submitButtons = document.querySelectorAll('.submit-button')
 
-    buttons.forEach(button => {
-      button.classList.remove('size-selected')
+  if(!submitButtons) return
+
+  submitButtons.forEach(submitButton => {
+    if(!submitButton) return
+
+    submitButton.addEventListener('click', (event) => {
+  
+      event.preventDefault()
+  
+      nextTab()
     })
-
-    button.classList.add('size-selected')
   })
-})
+}
+
+function setSizeFunctionality() {
+  buttons.forEach(button => {
+
+    button.addEventListener('click', (event) => {
+      event.preventDefault()
+  
+      buttons.forEach(button => {
+        button.classList.remove('selected')
+      })
+  
+      button.classList.add('selected')
+    })
+  })
+}
 
 //all prices are in usd
 function generateRecommendedBoards() {
@@ -73,4 +99,10 @@ function generateRecommendedCaps() {
 
 }
 
+//preventReload()
+setSizeFunctionality()
 generateRecommendedBoards()
+generateRecommendedSwitches()
+generateRecommendedCaps()
+setNextButtonFunctionality()
+generateStatusBar()

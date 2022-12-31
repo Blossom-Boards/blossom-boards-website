@@ -45,12 +45,12 @@ textarea {
     width: 15vw;
 }
 
-.size-selected {
+.selected {
     background-color: black;
     border: 4px black solid;
 }
 
-.size-selected:hover {
+.selected:hover {
     background-color: black;
     color: white;
     border: 4px black solid;
