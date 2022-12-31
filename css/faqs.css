@@ -37,6 +37,12 @@ details{
     margin-bottom:20px;
     border:none;
     cursor:pointer;
+    transition: 200ms ease;
+}
+
+details:hover{
+    transition: 200ms ease;
+    transform: translateY(-5px);
 }
 
 details > summary {
@@ -51,4 +57,10 @@ details > p {
     padding-left:2%;
     margin:0;
     width:fit-content;
+}
+
+details:focus {
+
+    height: 50px;
+    transition: 200ms ease;
 }
