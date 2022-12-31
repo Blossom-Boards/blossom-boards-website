@@ -18,3 +18,47 @@ main {
 .red {
     color: red;
 }
+
+.custom-order-form {
+
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+h2 {
+    margin: 10px;
+}
+
+input {
+    margin: 10px;
+}
+label {
+    margin: 10px;
+}
+textarea {
+    margin: 10px;
+}
+
+.size-button {
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.card {
+    width: 15vw;
+}
+
+.size-selected {
+    background-color: black;
+    border: 4px black solid;
+}
+
+.size-selected:hover {
+    background-color: black;
+    color: white;
+    border: 4px black solid;
+}

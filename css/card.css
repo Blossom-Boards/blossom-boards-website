@@ -18,10 +18,21 @@
     opacity:100%;
 }
 
+.cards-container {
+  display: flex;
+  margin: 10px;
+}
+
 .card-container {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  transition: 200ms ease;
+}
+
+.card-container:hover {
+  transition: 200ms ease;
+  transform: translateY(-5px);
 }
 
 .card-container h1{
