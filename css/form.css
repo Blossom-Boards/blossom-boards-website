@@ -1,0 +1,32 @@
+.form-button {
+  margin-top: 50px;
+  font-size: 30px;
+  align-self: center;
+  width: 30vw;
+}
+
+.text-input {
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 1px #E5A4A4 solid;
+  font-size: 20px;
+  color: #684747;
+  outline: none;
+  transition: 200ms ease;
+  opacity: .4;
+}
+
+.text-input:focus {
+  transition: 200ms ease;
+  opacity: 1;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.important-text {
+  width: 80vw;
+}

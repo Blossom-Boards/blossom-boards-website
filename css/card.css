@@ -7,7 +7,7 @@
 
 .card-image-products {
     transition: 500ms;
-    opacity:70%;
+    opacity:60%;
     object-fit: cover;
     width: 90%;
     height: 250px;
@@ -18,9 +18,11 @@
     opacity:100%;
 }
 
-.cards-container {
+.list-of-cards {
   display: flex;
   margin: 10px;
+  justify-content: flex-start;
+  overflow-x: scroll;
 }
 
 .card-container {

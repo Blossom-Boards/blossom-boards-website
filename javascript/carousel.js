@@ -160,7 +160,6 @@ function stopAutoScrolling() {
 }
 
 function resetAutoScrolling() {
-  console.log('jeffing')
   stopAutoScrolling(autoScrollInterval)
   startAutoScrolling()
 }

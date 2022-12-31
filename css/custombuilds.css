@@ -11,10 +11,6 @@ main {
     margin: 10px;
 }
 
-.important-text {
-    width: 80vw;
-}
-
 .red {
     color: red;
 }
@@ -23,24 +19,21 @@ main {
 
 }
 
-.tab {
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-}
-
 h2 {
     margin: 10px;
 }
 
 input {
-    margin: 10px;
+    margin-left: 10px;
+    width: 50vw;
 }
 label {
     margin: 10px;
+    width: 50vw;
 }
 textarea {
     margin: 10px;
+    width: 50vw;
 }
 
 .size-button {

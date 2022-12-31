@@ -1,4 +1,4 @@
-let cardsContainer = document.querySelector('.cards-container')
+let cardsContainer = document.querySelector('.list-of-cards')
 
 let buttons = document.querySelectorAll('button')
 let selectedSize = buttons[0].innerHTML
@@ -25,6 +25,24 @@ function generateRecommendedBoards() {
       size: 60,
       src: '../images/board1.jpg'
     },
+    {
+      name: 'jeff', 
+      cost: 20,
+      size: 60,
+      src: '../images/board1.jpg'
+    },
+    {
+      name: 'jeff', 
+      cost: 20,
+      size: 60,
+      src: '../images/board1.jpg'
+    },
+    {
+      name: 'jeff', 
+      cost: 20,
+      size: 65,
+      src: '../images/board1.jpg'
+    },
   ]
 
   boards.forEach(board => {
@@ -45,6 +63,14 @@ function generateRecommendedBoards() {
     `
     cardsContainer.appendChild(cardContainer)
   })
+}
+
+function generateRecommendedSwitches() {
+
+}
+
+function generateRecommendedCaps() {
+
 }
 
 generateRecommendedBoards()

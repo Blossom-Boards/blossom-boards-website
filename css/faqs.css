@@ -60,7 +60,6 @@ details > p {
 }
 
 details:focus {
-
     height: 50px;
     transition: 200ms ease;
 }
