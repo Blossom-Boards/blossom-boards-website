@@ -8,10 +8,13 @@ h1{
 }
 
 #profile section{
-    margin: 10px;
-    padding: 50px;
+    margin:0;
+    padding:0;
     display: flex;
     gap:2rem;
+    justify-content: center;
+    align-items: center;
+    border:10px solid black;
 }
 
 .profile{

@@ -38,12 +38,14 @@
 }
 
 .card-container h1{
+  color:#DFB6B6;
   margin: 6px;
   font-size:20px;
   font-weight:bold;
 }
 
 .card-container p{
+  color:#DFB6B6;
   margin: 5px 0 0 6px;
   font-size:16px;
   font-weight:600;
