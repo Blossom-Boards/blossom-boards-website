@@ -1,12 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-h1{
+.subtitles{
     margin-top:50px;
     margin-bottom:50px;
-    font-size:60px;
+    font-size:50px;
     text-align: center;
 }
 
 .business-description{
+    color:#DFB6B6;
+    padding-left:7vw;
+    padding-right:7vw;
+    font-weight:300;
+    font-size:35px;
+    text-align: left;
+}
+
+#business-synopsis{
+    color:#DFB6B6;
+    padding-left:7vw;
+    padding-right:7vw;
+    font-weight:300;
+    font-size:40px;
     text-align: center;
 }
 

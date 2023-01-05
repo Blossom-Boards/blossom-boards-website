@@ -14,7 +14,7 @@ function header() {
       <a class="hover-text" href="faqs.html"><h1 class="nav-text">FAQs</h1></a>
       <a class="hover-text" href="about.html"><h1 class="nav-text">ABOUT US</h1></a>
   </nav>
-  <hr>
+  <hr id="nav-bar">
   `
 
   let body = document.querySelector('body')

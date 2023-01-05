@@ -61,5 +61,6 @@ details > p {
 
 details:focus {
     height: 50px;
+    margin-bottom:50px;
     transition: 200ms ease;
 }
