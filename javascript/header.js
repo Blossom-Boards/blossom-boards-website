@@ -4,7 +4,7 @@ function header() {
   
   headerContainer.innerHTML = `
   
-  <a class="hover-text" href="main.html"><h1 id="name">Blossom Boards</h1></a>
+  <a class="hover-text" href="index.html"><h1 id="name">Blossom Boards</h1></a>
   <img id="icon" src="../images/icon.png"></img>
   <nav>
       <a class="hover-text" href="index.html"><h1 class="nav-text">HOME</h1></a>
