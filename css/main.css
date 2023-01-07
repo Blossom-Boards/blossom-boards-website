@@ -33,4 +33,5 @@ main {
     justify-content: left;
     display:flex;
     gap:20px;
+    flex-wrap: wrap;
 }
